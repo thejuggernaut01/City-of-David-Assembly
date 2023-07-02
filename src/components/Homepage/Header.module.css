@@ -1,0 +1,161 @@
+.header {
+  height: 500px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(245, 245, 245, 0.419),
+      rgba(66, 14, 92, 0.73)
+    ),
+    url("../../assets/headerImg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+header h1,
+header p {
+  color: rgb(238, 203, 203);
+}
+
+a {
+  position: relative;
+  text-decoration: none;
+}
+
+a:hover {
+  color: purple;
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(90, 5, 90);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+a:hover::before {
+  transform: scaleX(1);
+}
+
+img {
+  filter: brightness(50%);
+}
+
+.mission,
+.vision {
+  inline-size: 300px;
+  overflow-wrap: break-word;
+}
+
+@media screen and (min-width: 320px) {
+  header {
+    height: 90vh;
+    position: relative;
+  }
+
+  .header__text h1 {
+    font-size: 1.375rem;
+  }
+
+  .header__text p {
+    font-size: 14px;
+  }
+
+  .special {
+    max-width: 960px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .card {
+    display: flex;
+    background-color: grey;
+    color: rgb(244, 240, 233);
+    border-radius: 10px;
+
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+    margin-bottom: 1rem;
+  }
+
+  .card:hover {
+    transform: scale(102%);
+  }
+
+  .card img {
+    border-radius: 10px 0 0 10px;
+    width: 190px;
+    height: auto;
+  }
+  .card-text {
+    text-align: center;
+    padding: 5px 0 0 15px;
+  }
+  .card-text button {
+    padding: 0 13px 0 13px;
+    border-radius: 20px;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  header {
+    height: 500px;
+  }
+
+  .header__text h1 {
+    font-size: 1.875rem;
+  }
+
+  .header__text p {
+    font-size: 1.125rem;
+  }
+
+  .card {
+    margin-left: 6rem;
+    margin-right: 6rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .special {
+    max-width: 960px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    align-items: center;
+    justify-items: center;
+  }
+  .card {
+    display: block;
+    border-radius: 10px;
+    margin: 0;
+  }
+  .card:hover {
+    transform: scale(102%);
+  }
+
+  .card img {
+    border-radius: 10px 10px 0 0;
+    width: auto;
+    height: auto;
+  }
+  .card-text {
+    padding: 0;
+    text-align: center;
+  }
+  .card-text button {
+    margin-bottom: 20px;
+  }
+}
