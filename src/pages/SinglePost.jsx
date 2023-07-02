@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import client from "../client";
 import classes from "./BlogPage.module.css";
 import BlockContent from "@sanity/block-content-to-react";
+import Loader from "../components/UI/Loader";
 
 export default function SinglePost() {
   const [singlePost, setSinglePost] = useState([]);
@@ -32,10 +33,13 @@ export default function SinglePost() {
 
   return (
     <>
-      {isLoading ? (
-        <h1 className="uppercase font-bold text-4xl tracking-wide mb-5 md:text-6xl lg:text-8xl flex items-center justify-center h-screen">
+      {/* <h1 className="uppercase font-bold text-4xl tracking-wide mb-5 md:text-6xl lg:text-8xl flex items-center justify-center h-screen">
           Loading...
-        </h1>
+        </h1> */}
+      {isLoading ? (
+        <div className="text-center my-36">
+          <Loader />
+        </div>
       ) : (
         <section className="px-5 xl:max-w-6xl xl:mx-auto">
           <h2 className="font-bold text-3xl mt-5 mb-2 tracking-widest text-center md:text-4xl opacity-80">
@@ -51,6 +55,7 @@ export default function SinglePost() {
               alt={singlePost.title}
               title={singlePost.title}
               className={`${classes["single_blog__image"]} rounded-md`}
+              loading="lazy"
             />
           )}
 

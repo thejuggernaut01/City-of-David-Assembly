@@ -47,7 +47,7 @@ export default function Navbar() {
         <ul
           className={
             nav
-              ? `${classes.nav} fixed left-0 top-0 w-[370px] h-full lg:h-[60%] border-r border-r-blue-900 ease-in-out duration-500 z-10`
+              ? `${classes.nav} fixed left-0 top-0 xs:w-[270px] h-full lg:h-[60%] border-r border-r-blue-900 ease-in-out duration-500 z-10`
               : "ease-in-out fixed left-[-100%]"
           }
         >
@@ -72,7 +72,7 @@ export default function Navbar() {
           <li className="p-3 border-b border-gray-600 text-white opacity-90 px-6">
             <Link
               className={`${classes.link} hover:text-white before:bg-white`}
-              to={"blog"}
+              to={"/blog"}
               onClick={handleNav}
             >
               Blog

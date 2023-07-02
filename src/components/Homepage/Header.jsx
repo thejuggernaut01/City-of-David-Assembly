@@ -62,6 +62,7 @@ const Header = (props) => {
             src={church}
             alt="church exterior"
             className="md:w-100 mdx:w-[28rem] lg:w-[32rem]"
+            loading="lazy"
           />
           <div>
             <p className="xs:pt-6 sm:pt-6 lg:pt-10 text-justify">
@@ -114,7 +115,11 @@ const Header = (props) => {
         <div className="md:flex md:justify-between md:gap-10 md:ml-20 md:mr-20 lg:ml-64 lg:mr-64">
           {/* MISSION */}
           <div className="md:text-left xs:flex flex-col justify-between items-center md:block">
-            <img src={mission} alt="someone studying psalm 139" className="" />
+            <img
+              src={mission}
+              alt="someone studying psalm 139"
+              loading="lazy"
+            />
             <h2 className="pt-8 pb-2 font-semibold opacity-90">Mission</h2>
             <p
               className={`${classes.mission} xs:text-left xs:block opacity-90`}
@@ -141,7 +146,12 @@ const Header = (props) => {
             >
               Learn More
             </Button>
-            <img src={vision} alt="" className="xs:hidden md:block" />
+            <img
+              src={vision}
+              alt=""
+              className="xs:hidden md:block"
+              loading="lazy"
+            />
           </div>
         </div>
       </section>
@@ -162,7 +172,11 @@ const Header = (props) => {
         <div>
           <div className={`${classes.special} mt-5`}>
             <div className={`${classes.card} `}>
-              <img src={Sophronismos} alt="" />
+              <img
+                src={Sophronismos}
+                alt="Sophronismos Flyer Design"
+                loading="lazy"
+              />
               <div className={classes["card-text"]}>
                 <div className="pt-2">
                   <p className="xs:text-xl md:text-2xl">Sophronismos </p>
@@ -181,7 +195,8 @@ const Header = (props) => {
               <img
                 src={Phaneroo}
                 className="rounded-t-2xl h-[140px] w-[250px] object-cover"
-                alt=""
+                alt="Phaneroo Flyer Design"
+                loading="lazy"
               />
               <div className={classes["card-text"]}>
                 <div className="pt-2">
@@ -198,7 +213,11 @@ const Header = (props) => {
             </div>
 
             <div className={`${classes.card} `}>
-              <img src={Sophronismos} alt="" />
+              <img
+                src={Sophronismos}
+                alt="Sophronismos FLyer Design"
+                loading="lazy"
+              />
               <div className={classes["card-text"]}>
                 <div className="pt-2">
                   <p className="xs:text-xl md:text-2xl">Sophronismos </p>
