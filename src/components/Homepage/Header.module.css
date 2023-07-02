@@ -11,6 +11,21 @@
   background-position: center center;
 }
 
+.nav {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(245, 245, 245, 0.419),
+    rgba(66, 14, 92, 0.73)
+  );
+  --tw-backdrop-blur: blur(80px);
+
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness)
+    var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale)
+    var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert)
+    var(--tw-backdrop-opacity) var(--tw-backdrop-saturate)
+    var(--tw-backdrop-sepia);
+}
+
 header h1,
 header p {
   color: rgb(238, 203, 203);

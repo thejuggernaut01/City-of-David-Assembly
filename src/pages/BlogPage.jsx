@@ -57,7 +57,7 @@ export default function BlogPage() {
                 src={post.mainImage.asset.url}
                 alt={post.title}
               />
-              <h4 className="text-lg mt-4 text-center">{post.title}</h4>
+              <h4 className="text-lg mt-4 px-10 text-center">{post.title}</h4>
 
               <div className="text-center">
                 <button
