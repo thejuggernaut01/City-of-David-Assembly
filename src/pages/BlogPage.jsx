@@ -56,7 +56,7 @@ export default function BlogPage() {
                   loading="lazy"
                 />
                 <h4 className="text-lg mt-4 px-10 text-center">
-                  {post && post.title}
+                  {post.mainImage.asset.url && post.title && post.title}
                 </h4>
 
                 <div className="text-center">
