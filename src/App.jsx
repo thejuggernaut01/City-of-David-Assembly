@@ -2,12 +2,12 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Suspense, lazy } from "react";
 
 import RootRoute from "./pages/RootRoute";
-// import BlogPage from "./pages/BlogPage";
+import BlogPage from "./pages/BlogPage";
 import Error from "./pages/Error";
 import SinglePost from "./pages/SinglePost";
 import BlogRoute from "./pages/BlogRoute";
 
-const BlogPage = lazy(() => import("./pages/BlogPage"));
+// const BlogPage = lazy(() => import("./pages/BlogPage"));
 
 function App() {
   const router = createBrowserRouter([
@@ -23,11 +23,7 @@ function App() {
       children: [
         {
           index: true,
-          element: (
-            <Suspense fallback={<p>Loading...</p>}>
-              <BlogPage />
-            </Suspense>
-          ),
+          element: <BlogPage />,
         },
         { path: ":slug", element: <SinglePost /> },
       ],
