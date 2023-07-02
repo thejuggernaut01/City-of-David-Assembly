@@ -1,16 +1,11 @@
 import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
-import { Link, Location, useLocation } from "react-router-dom";
-import Button from "../UI/Button";
+import { Link } from "react-router-dom";
 import classes from "./Header.module.css";
 
 export default function Navbar() {
   const [nav, setNav] = useState(false);
-  const [error, setError] = useState("");
-
-  const location = useLocation();
-  const blog = location.pathname.split("/")[1];
 
   const handleNav = () => {
     setNav(!nav);
@@ -27,7 +22,7 @@ export default function Navbar() {
           <li>
             <a href="/">Home</a>
           </li>
-          <Link to={`${blog ? "" : "blog"}`}>Blog</Link>
+          <Link to={"blog"}>Blog</Link>
           <li>
             <a href="/">About Us</a>
           </li>
@@ -77,7 +72,7 @@ export default function Navbar() {
           <li className="p-3 border-b border-gray-600 text-white opacity-90 px-6">
             <Link
               className={`${classes.link} hover:text-white before:bg-white`}
-              to={`${blog ? "" : "blog"}`}
+              to={"blog"}
               onClick={handleNav}
             >
               Blog
