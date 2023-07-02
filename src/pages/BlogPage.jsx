@@ -55,7 +55,9 @@ export default function BlogPage() {
                   alt={post.title}
                   loading="lazy"
                 />
-                <h4 className="text-lg mt-4 px-10 text-center">{post.title}</h4>
+                <h4 className="text-lg mt-4 px-10 text-center">
+                  {post && post.title}
+                </h4>
 
                 <div className="text-center">
                   <button
